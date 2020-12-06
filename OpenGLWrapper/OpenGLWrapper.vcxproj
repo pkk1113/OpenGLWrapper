@@ -157,12 +157,12 @@
     <ClInclude Include="..\include\Cube.h" />
     <ClInclude Include="..\include\FrameBuffer.h" />
     <ClInclude Include="..\include\mygl.h" />
+    <ClInclude Include="..\include\OpenGLWrapper.h" />
     <ClInclude Include="..\include\Plane.h" />
     <ClInclude Include="..\include\Sampler.h" />
     <ClInclude Include="..\include\Shader.h" />
     <ClInclude Include="..\include\Texture.h" />
     <ClInclude Include="..\include\VertexArray.h" />
-    <ClInclude Include="OpenGLWrapper.h" />
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
