@@ -72,11 +72,11 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>C:\third_party\nanogui\ext\glad\include;C:\third_party\glm;include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\third_party\nanogui\ext\glad\include;C:\third_party\glm;..\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>C:\third_party\nanogui\ext\glad\include;C:\third_party\glm;include;$(IncludePath)</IncludePath>
+    <IncludePath>C:\third_party\nanogui\ext\glad\include;C:\third_party\glm;..\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
@@ -153,15 +153,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="include\Camera.h" />
-    <ClInclude Include="include\Cube.h" />
-    <ClInclude Include="include\FrameBuffer.h" />
-    <ClInclude Include="include\Plane.h" />
-    <ClInclude Include="include\Sampler.h" />
-    <ClInclude Include="include\Shader.h" />
-    <ClInclude Include="include\Texture.h" />
-    <ClInclude Include="include\VertexArray.h" />
-    <ClInclude Include="include\mygl.h" />
+    <ClInclude Include="..\include\Camera.h" />
+    <ClInclude Include="..\include\Cube.h" />
+    <ClInclude Include="..\include\FrameBuffer.h" />
+    <ClInclude Include="..\include\mygl.h" />
+    <ClInclude Include="..\include\Plane.h" />
+    <ClInclude Include="..\include\Sampler.h" />
+    <ClInclude Include="..\include\Shader.h" />
+    <ClInclude Include="..\include\Texture.h" />
+    <ClInclude Include="..\include\VertexArray.h" />
     <ClInclude Include="OpenGLWrapper.h" />
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
