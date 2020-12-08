@@ -1,5 +1,5 @@
 #pragma once
-#include "mygl.h"
+#include <mygl.h>
 
 #define SHADER_MACRO(version, shader)\
 	"#version " #version "\n"\

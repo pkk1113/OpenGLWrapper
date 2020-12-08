@@ -1,5 +1,5 @@
 #pragma once
-#include "mygl.h"
+#include <mygl.h>
 
 namespace glwrapper
 {
