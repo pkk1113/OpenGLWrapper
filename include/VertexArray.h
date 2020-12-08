@@ -12,7 +12,7 @@ namespace glwrapper
 		~VertexArray();
 		virtual void Bind();
 		virtual void Draw();
-		static void Unbind();
+		virtual void Unbind();
 		GLuint vao() const;
 	};
 
