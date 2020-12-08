@@ -2,7 +2,6 @@
 
 namespace glwrapper
 {
-
 	VertexArray::VertexArray()
 	{
 		glGenVertexArrays(1, &m_vao);
@@ -22,17 +21,27 @@ namespace glwrapper
 		glBindVertexArray(m_vao);
 	}
 
+	void VertexArray::Draw()
+	{
+
+	}
+
 	void VertexArray::Unbind()
 	{
 		glBindVertexArray(0);
 	}
 
-	CAutoVertexArray::CAutoVertexArray()
+	GLuint VertexArray::vao() const
+	{
+		return m_vao;
+	}
+
+	AutoVertexArray::AutoVertexArray()
 	{
 		m_va.Bind();
 	}
 
-	CAutoVertexArray::~CAutoVertexArray()
+	AutoVertexArray::~AutoVertexArray()
 	{
 		m_va.Unbind();
 	}

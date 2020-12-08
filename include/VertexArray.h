@@ -10,16 +10,18 @@ namespace glwrapper
 	public:
 		VertexArray();
 		~VertexArray();
-		void Bind();
+		virtual void Bind();
+		virtual void Draw();
 		static void Unbind();
+		GLuint vao() const;
 	};
 
-	class CAutoVertexArray
+	class AutoVertexArray
 	{
 		VertexArray m_va;
 
 	public:
-		CAutoVertexArray();
-		~CAutoVertexArray();
+		AutoVertexArray();
+		~AutoVertexArray();
 	};
 }
