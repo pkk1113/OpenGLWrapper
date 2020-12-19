@@ -2,6 +2,8 @@
 #ifdef _DEBUG
 #include <cstdio>
 #endif
+#include <fstream>
+#include <sstream>
 
 namespace glwrapper
 {
@@ -20,6 +22,18 @@ namespace glwrapper
 			glDeleteProgram(m_program);
 			m_program = 0;
 		}
+	}
+
+	Shader Shader::FromFile(const char* vertFile, const char* fragFile)
+	{
+		auto vert = LoadFileData(vertFile);
+		auto frag = LoadFileData(fragFile);
+		return Shader(vert.c_str(), frag.c_str());
+	}
+
+	GLuint Shader::id() const
+	{
+		return m_program;
 	}
 
 	void Shader::Use() const
@@ -267,5 +281,13 @@ namespace glwrapper
 		}
 
 		return shader;
+	}
+
+	std::string Shader::LoadFileData(const char* file)
+	{
+		std::ifstream f(file);
+		std::stringstream ss;
+		ss << f.rdbuf();
+		return ss.str();
 	}
 }

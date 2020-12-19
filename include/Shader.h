@@ -1,5 +1,6 @@
 #pragma once
 #include <mygl.h>
+#include <string>
 
 #define SHADER_MACRO(version, shader)\
 	"#version " #version "\n"\
@@ -13,11 +14,14 @@ namespace glwrapper
 		static size_t m_programBuildCount_;
 #endif
 		mutable GLint m_loc;
-		GLuint m_program;
+		GLuint m_program = 0;
 
 	public:
 		Shader(const char* vert, const char* frag);
 		virtual ~Shader();
+		static Shader FromFile(const char* vertFile, const char* fragFile);
+		GLuint id() const;
+
 		void Use() const;
 		static void Unuse();
 
@@ -56,5 +60,6 @@ namespace glwrapper
 	private:
 		static GLuint LoadOpenGLProgram(const char* vertexSource, const char* fragmentSource);
 		static GLuint LoadOpenGLShader(const char* source, GLenum target);
+		static std::string LoadFileData(const char* file);
 	};
 }
